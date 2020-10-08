@@ -12,21 +12,17 @@ CREATE FUNCTION mycat_seq_currval(seq_name VARCHAR(50)) RETURNS VARCHAR(64)
 DETERMINISTIC
 BEGIN
 DECLARE retval VARCHAR(64);
-SET retval="-999999999,null";
-SELECT CONCAT(CAST(current_value AS CHAR),",",CAST(increment AS CHAR)) INTO retval FROM
-MYCAT_SEQUENCE WHERE NAME = seq_name;
+SET retval = "-999999999,null";
+SELECT CONCAT(CAST(current_value AS CHAR), ",", CAST(increment AS CHAR)) INTO retval FROM mycat_sequence WHERE name = seq_name;
 RETURN retval;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE FUNCTION mycat_seq_setval(seq_name VARCHAR(50),VALUE INTEGER) RETURNS
-VARCHAR(64)
+CREATE FUNCTION mycat_seq_setval(seq_name VARCHAR(50), value INTEGER) RETURNS VARCHAR(64)
 DETERMINISTIC
 BEGIN
-UPDATE MYCAT_SEQUENCE
-SET current_value = VALUE
-WHERE NAME = seq_name;
+UPDATE mycat_sequence SET current_value = value WHERE name = seq_name;
 RETURN mycat_seq_currval(seq_name);
 END $$
 DELIMITER ;
@@ -35,8 +31,7 @@ DELIMITER $$
 CREATE FUNCTION mycat_seq_nextval(seq_name VARCHAR(50)) RETURNS VARCHAR(64)
 DETERMINISTIC
 BEGIN
-UPDATE MYCAT_SEQUENCE
-SET current_value = current_value + increment WHERE NAME = seq_name;
+UPDATE mycat_sequence SET current_value = current_value + increment WHERE name = seq_name;
 RETURN mycat_seq_currval(seq_name);
 END $$
 DELIMITER ;
@@ -44,4 +39,23 @@ DELIMITER ;
 # 初始化全局序列表记录
 INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_user', 0, 100);
 
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_busbar_ground', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_breaker', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_busbar', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_line', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_load', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_sub', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_tran', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_tran_imbalance', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_winding', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_peak_sudden_change', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_single_power_important_user', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_single_power_sub', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_sub_aisle', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_tran_temperature', -99, 100);
+
+# sequence_db_conf.properties
+T_USER=dn1
+
+# schema.xml
 <table name="t_user" primaryKey="id" autoIncrement="true"/>
