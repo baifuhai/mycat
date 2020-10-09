@@ -19,6 +19,8 @@
 		<table name="t_tran_temperature" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-2" rule="sharding-by-date"/>
 	</schema>
 
+	<dataNode name="zd_pd_data_middle_platform_dn" dataHost="host1" database="zd_pd_data_middle_platform"/>
+
 	<dataNode name="zd_pd_data_middle_platform_dn$1-2" dataHost="host1" database="zd_pd_data_middle_platform_$1-2"/>
 
 	<dataHost name="host1" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
