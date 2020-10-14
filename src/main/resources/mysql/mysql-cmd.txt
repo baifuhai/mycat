@@ -1,0 +1,39 @@
+数据库备份还原:
+
+备份:
+mysqldump -uroot -p123456 db > c:\backup.sql
+
+还原:
+mysql -uroot -p123456 db < c:\backup.sql//导入之前先要创建数据库
+or
+mysql> source backup.txt;//这里backup.txt在放在data目录下
+
+-----------------------------------------------------------------------------------------
+
+增加新用户:（以root登录）
+
+grant select,insert,update,delete on *.* to test@"%" identified by "123456";
+
+grant select,insert,update,delete on *.* to test@localhost identified by "123456";//只能在本地登录
+
+-----------------------------------------------------------------------------------------
+
+修改密码:
+
+mysqladmin -uroot password 123456;//无密码，创建密码
+
+mysqladmin -uroot -p123456 password 123456;//有密码，修改
+
+-----------------------------------------------------------------------------------------
+
+连接:
+
+mysql -h127.0.0.1 -P3306 -uroot -p123456
+
+-----------------------------------------------------------------------------------------
+
+查看数据库隔离级别: select @@tx_isolation
+
+设置数据库隔离级别: set TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+
+-----------------------------------------------------------------------------------------
