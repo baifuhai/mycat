@@ -1,7 +1,7 @@
 # 创建全局序列表
 CREATE TABLE `mycat_sequence` (
 	`name` varchar(50) NOT NULL,
-	`current_value` int(11) NOT NULL,
+	`current_value` bigint(20) NOT NULL,
 	`increment` int(11) NOT NULL DEFAULT 100,
 	PRIMARY KEY(`name`)
 );
