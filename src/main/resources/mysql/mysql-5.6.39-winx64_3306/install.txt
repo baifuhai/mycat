@@ -1,0 +1,10 @@
+net stop MySQL56_3306
+D:/mysql-5.6.39-winx64_3306/bin/mysqld remove MySQL56_3306
+D:/mysql-5.6.39-winx64_3306/bin/mysqld install MySQL56_3306 --defaults-file="D:/mysql-5.6.39-winx64_3306/my.ini"
+net start MySQL56_3306
+
+D:/mysql-5.6.39-winx64_3306/bin/mysql -uroot -P3306
+use mysql;
+UPDATE user SET password=PASSWORD("123456") WHERE user='root';
+FLUSH PRIVILEGES;
+exit;
