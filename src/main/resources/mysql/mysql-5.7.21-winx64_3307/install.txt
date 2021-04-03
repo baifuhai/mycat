@@ -1,12 +1,12 @@
 set MYSQL_HOME=
-F:/mysql-5.7.21-winx64_3307/bin/mysqld --initialize-insecure --console
+D:/mysql-5.7.21-winx64_3307/bin/mysqld --initialize-insecure --console
 
 net stop MySQL57_3307
-F:/mysql-5.7.21-winx64_3307/bin/mysqld remove MySQL57_3307
-F:/mysql-5.7.21-winx64_3307/bin/mysqld install MySQL57_3307 --defaults-file="F:/mysql-5.7.21-winx64_3307/my.ini"
+D:/mysql-5.7.21-winx64_3307/bin/mysqld remove MySQL57_3307
+D:/mysql-5.7.21-winx64_3307/bin/mysqld install MySQL57_3307 --defaults-file="D:/mysql-5.7.21-winx64_3307/my.ini"
 net start MySQL57_3307
 
-F:/mysql-5.7.21-winx64_3307/bin/mysql -uroot -P3307
+D:/mysql-5.7.21-winx64_3307/bin/mysql -uroot -P3307
 use mysql;
 UPDATE user SET authentication_string=PASSWORD("123456") WHERE user='root';
 FLUSH PRIVILEGES;
