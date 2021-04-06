@@ -137,7 +137,7 @@
 	<function name="partbyday" class="io.mycat.route.function.PartitionByDate">
 		<property name="dateFormat">yyyy-MM-dd HH:mm:ss</property>
 		<!--<property name="sNaturalDay">1</property>-->
-		<property name="sBeginDate">2021-01-01 00:00:00</property>
+		<property name="sBeginDate">2020-07-17 00:00:00</property>
 		<!--<property name="sEndDate">2020-10-15</property>-->
 		<property name="sPartionDay">1</property>
 	</function>
