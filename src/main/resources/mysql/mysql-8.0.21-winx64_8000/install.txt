@@ -1,0 +1,16 @@
+set MYSQL_HOME=
+D:/dev/mysql-8.0.21-winx64_8000/bin/mysqld --initialize-insecure --console
+
+net stop MySQL80_8000
+D:/dev/mysql-8.0.21-winx64_8000/bin/mysqld remove MySQL80_8000
+D:/dev/mysql-8.0.21-winx64_8000/bin/mysqld install MySQL80_8000 --defaults-file="D:/dev/mysql-8.0.21-winx64_8000/my.ini"
+net start MySQL80_8000
+
+D:/dev/mysql-8.0.21-winx64_8000/bin/mysql -uroot -P8000
+use mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES;
+CREATE USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+exit;
