@@ -88,6 +88,12 @@ max_allowed_packet = 20M(4M)
 # 不进行反解析，可以加快数据库的反应时间
 skip_name_resolve = 1(0)
 
+disable_log_bin = 1
+server_id = 1
+log_bin = binlog
+log_bin_index = binlog.index
+binlog_format = ROW(ROW)
+
 sql_mode = NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 (
 NO_ENGINE_SUBSTITUTION
