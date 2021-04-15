@@ -27,22 +27,22 @@
 
 	<dataHost name="host0" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
-		<writeHost host="hostM1" url="localhost:3306" user="root" password="root"/>
+		<writeHost host="hostM1" url="192.168.1.20:3306" user="root" password="root"/>
 	</dataHost>
 
 	<dataHost name="host1" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
-		<writeHost host="hostM1" url="localhost:3001" user="root" password="root"/>
+		<writeHost host="hostM1" url="192.168.1.20:3001" user="root" password="root"/>
 	</dataHost>
 
 	<dataHost name="host2" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
-		<writeHost host="hostM1" url="localhost:3002" user="root" password="root"/>
+		<writeHost host="hostM1" url="192.168.1.20:3002" user="root" password="root"/>
 	</dataHost>
 
 	<dataHost name="host3" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
-		<writeHost host="hostM1" url="localhost:3003" user="root" password="root"/>
+		<writeHost host="hostM1" url="192.168.1.20:3003" user="root" password="root"/>
 	</dataHost>
 
 	<!--
