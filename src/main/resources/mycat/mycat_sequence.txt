@@ -40,6 +40,9 @@ DELIMITER ;
 INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_user', 0, 100);
 
 INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_busbar_ground', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_dms_single_power_sub', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_ground_disconnector', -99, 100);
+INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_health_level_score_detail', -99, 100);
 INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_breaker', -99, 100);
 INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_busbar', -99, 100);
 INSERT INTO `mycat_sequence` (`name`, `current_value`, `increment`) VALUES ('t_measure_line', -99, 100);
