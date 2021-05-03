@@ -4,6 +4,7 @@
 
 	<schema name="zd_pd_data_middle_platform" checkSQLschema="true" sqlMaxLimit="-1" randomDataNode="zd_pd_data_middle_platform_dn1">
 		<table name="t_busbar_ground" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
+		<table name="t_dms_single_power_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
 		<table name="t_ground_disconnector" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-100" rule="sharding-by-murmur"/>
 		<table name="t_health_level_score_detail" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
 		<table name="t_measure_breaker" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-100" rule="sharding-by-murmur"/>
