@@ -3,28 +3,28 @@
 <mycat:schema xmlns:mycat="http://io.mycat/">
 
 	<schema name="zd_pd_data_middle_platform" checkSQLschema="true" sqlMaxLimit="-1" randomDataNode="zd_pd_data_middle_platform_dn1">
-		<table name="t_busbar_ground" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_dms_single_power_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
+		<table name="t_busbar_ground" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_dms_single_power_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
 		<table name="t_ground_disconnector" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-100" rule="sharding-by-murmur"/>
-		<table name="t_health_level_score_detail" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
+		<table name="t_health_level_score_detail" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
 		<table name="t_measure_breaker" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-100" rule="sharding-by-murmur"/>
-		<table name="t_measure_busbar" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_measure_line" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_measure_load" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_measure_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_measure_tran" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_measure_tran_imbalance" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_measure_winding" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_peak_sudden_change" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_single_power_important_user" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_single_power_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_sub_aisle" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
-		<table name="t_tran_temperature" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-300" rule="sharding-by-date"/>
+		<table name="t_measure_busbar" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_measure_line" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_measure_load" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_measure_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_measure_tran" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_measure_tran_imbalance" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_measure_winding" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_peak_sudden_change" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_single_power_important_user" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_single_power_sub" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_sub_aisle" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
+		<table name="t_tran_temperature" primaryKey="id" autoIncrement="true" dataNode="zd_pd_data_middle_platform_dn$1-400" rule="sharding-by-date"/>
 	</schema>
 
 	<dataNode name="zd_pd_data_middle_platform_dn" dataHost="host0" database="zd_pd_data_middle_platform"/>
 
-	<dataNode name="zd_pd_data_middle_platform_dn$1-300" dataHost="host$1-3" database="zd_pd_data_middle_platform_$1-100"/>
+	<dataNode name="zd_pd_data_middle_platform_dn$1-400" dataHost="host$1-4" database="zd_pd_data_middle_platform_$1-100"/>
 
 	<dataHost name="host0" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
@@ -44,6 +44,11 @@
 	<dataHost name="host3" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
 		<writeHost host="hostM1" url="192.168.1.20:3003" user="root" password="root"/>
+	</dataHost>
+
+	<dataHost name="host4" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1" slaveThreshold="100">
+		<heartbeat>select user()</heartbeat>
+		<writeHost host="hostM1" url="192.168.1.20:3004" user="root" password="root"/>
 	</dataHost>
 
 	<!--
