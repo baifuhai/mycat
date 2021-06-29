@@ -37,3 +37,11 @@ mysql -h127.0.0.1 -P3306 -uroot -p123456
 设置数据库隔离级别: set TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 
 -----------------------------------------------------------------------------------------
+
+获取表字段信息
+DESC `t_key_area`;
+SHOW COLUMNS FROM `t_key_area`;
+SHOW FULL COLUMNS FROM `t_key_area`;
+select COLUMN_NAME, DATA_TYPE, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA, COLUMN_COMMENT from information_schema.`COLUMNS` where TABLE_SCHEMA = 'zd_pd_data_middle_platform' and TABLE_NAME = 't_key_area'
+
+-----------------------------------------------------------------------------------------
